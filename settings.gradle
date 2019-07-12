@@ -1,0 +1,1 @@
+include ':app', ':faw_text_view'
