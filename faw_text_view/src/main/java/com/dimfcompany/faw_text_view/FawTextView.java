@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Typeface;
 import android.support.annotation.Nullable;
 import android.support.v4.content.res.ResourcesCompat;
+import android.support.v4.graphics.TypefaceCompat;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -37,7 +38,7 @@ public class FawTextView extends AppCompatTextView
 
     private void init(@Nullable AttributeSet attrs)
     {
-        typeface = ResourcesCompat.getFont(getContext(), R.font.fawsolid);
+        typeface = Typeface.createFromAsset(getContext().getAssets(),"fawsolid.otf");
         this.setTypeface(typeface);
         initAttributes(attrs);
     }
@@ -91,10 +92,7 @@ public class FawTextView extends AppCompatTextView
             this.setGravity(gravity);
         }
 
-
         ta.recycle();
-
-        this.setTypeface(typeface);
     }
 
     @Override
