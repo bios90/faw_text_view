@@ -93,13 +93,14 @@ public class FawTextView extends AppCompatTextView
 
 
         ta.recycle();
+
+        this.setTypeface(typeface);
     }
 
     @Override
     protected void onDraw(Canvas canvas)
     {
         super.onDraw(canvas);
-        this.setTypeface(typeface);
     }
 
     private static int dp2pxInt(float dp)
